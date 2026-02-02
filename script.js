@@ -828,3 +828,46 @@ document.querySelectorAll('.feature-card, .about-content, .contact-content').for
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+// ===============================
+// Cars Render Logic
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const carsGrid = document.getElementById("carsGrid");
+
+  if (!carsGrid) return;
+
+  const cars = [
+    {
+      name: "Maruti Swift",
+      type: "Petrol • Manual",
+      price: 2500
+    },
+    {
+      name: "Hyundai Creta",
+      type: "Diesel • Manual",
+      price: 4000
+    },
+    {
+      name: "Toyota Innova",
+      type: "Diesel • Automatic",
+      price: 5500
+    }
+  ];
+
+  cars.forEach(car => {
+    const card = document.createElement("div");
+    card.className = "car-card";
+
+    card.innerHTML = `
+      <h3>${car.name}</h3>
+      <p>${car.type}</p>
+      <strong>₹${car.price} / day</strong>
+      <br><br>
+      <button class="btn btn-primary">Book Now</button>
+    `;
+
+    carsGrid.appendChild(card);
+  });
+});
+
+
