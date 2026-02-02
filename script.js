@@ -92,7 +92,9 @@ const cars = [
         category: "Sedan"
     }
 ];
-
+document.addEventListener("DOMContentLoaded", () => {
+    renderCars();
+});
 // ==========================================
 // DOM Elements
 // ==========================================
@@ -869,5 +871,6 @@ document.addEventListener("DOMContentLoaded", () => {
     carsGrid.appendChild(card);
   });
 });
+
 
 
