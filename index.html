@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveEase - Premium Car Rentals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon"></span>
+                DriveEase
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#cars" class="nav-link">Cars</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span class="currency-label">INR</span>
+                <a href="auth.html" class="btn-nav btn-signin">Sign in</a>
+                <a href="auth.html" class="btn-nav btn-register">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero + Search Section (Booking.com style) -->
+    <section class="hero-search" id="home">
+        <div class="hero-search-content">
+            <h1>Car hire for every kind of trip</h1>
+            <p>Premium cars at affordable prices across India</p>
+            <div class="search-container">
+                <form id="quickSearchForm" class="booking-search-form">
+                    <div class="search-field">
+                        <label for="searchPickup">Pickup Date</label>
+                        <input type="date" id="searchPickup" required>
+                    </div>
+                    <div class="search-field">
+                        <label for="searchDropoff">Drop-off Date</label>
+                        <input type="date" id="searchDropoff" required>
+                    </div>
+                    <button type="submit" class="btn-search">
+                        <span>Search</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust / Benefits Strip -->
+    <section class="trust-strip">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">✓</div>
+                    <div class="trust-content">
+                        <h3>Free Cancellation</h3>
+                        <p>Cancel up to 48 hours before pickup</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🛡️</div>
+                    <div class="trust-content">
+                        <h3>24/7 Customer Support</h3>
+                        <p>Round-the-clock assistance</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">✅</div>
+                    <div class="trust-content">
+                        <h3>Verified Vehicles</h3>
+                        <p>All cars inspected and certified</p>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">💰</div>
+                    <div class="trust-content">
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden fees or charges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section class="cars-section" id="cars">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Fleet</h2>
+                <p>Choose from our wide range of vehicles to suit your needs</p>
+            </div>
+            <div class="cars-grid" id="carsGrid">
+                <!-- Cars will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about renting with DriveEase</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What documents are required for car rental?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You need a valid driving license (Indian or International), a government-issued ID proof (Aadhaar, PAN, or Passport), and a credit or debit card for the security deposit. All documents must be valid and in your name.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is fuel included in the rental price?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No, fuel is not included. The car will be provided with a full tank, and you should return it with a full tank. If you return it with less fuel, refueling charges will apply at market rates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I cancel my booking?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel your booking free of charge up to 48 hours before the pickup time. Cancellations made within 48 hours may be subject to a cancellation fee. Please check the terms at the time of booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is the price all-inclusive?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The displayed price includes the rental charges, basic insurance, and taxes. Additional charges may apply for optional add-ons like GPS, child seats, or additional drivers. Fuel, tolls, and parking are not included.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is the minimum age to rent a car?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The minimum age to rent a car is 21 years. Drivers between 21-24 years may be subject to a young driver surcharge. You must have held a valid driving license for at least one year.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I add an additional driver?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can add an additional driver for a nominal daily fee. The additional driver must meet the same age and license requirements and must be present at the time of pickup with all required documents.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About DriveEase</h2>
+                    <p>With over 10 years of experience in the car rental industry, DriveEase has been providing exceptional service to thousands of satisfied customers.</p>
+                    <p>Our mission is to make car rental simple, affordable, and enjoyable. We maintain a modern fleet of well-maintained vehicles and offer flexible rental options to meet your unique needs.</p>
+                    <ul class="about-stats">
+                        <li><strong>500+</strong><span>Happy Customers</span></li>
+                        <li><strong>50+</strong><span>Premium Cars</span></li>
+                        <li><strong>10+</strong><span>Years Experience</span></li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&auto=format&q=80" alt="Luxury car fleet" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Main Street, Downtown, City 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@driveease.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Sun: 8:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder sections for footer links (frontend-only) -->
+    <section class="footer-anchor" id="terms" aria-hidden="true"></section>
+    <section class="footer-anchor" id="privacy" aria-hidden="true"></section>
+
+    <!-- Footer (Booking.com style) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Customer help</a></li>
+                        <li><a href="#booking">Manage bookings</a></li>
+                        <li><a href="#safety">Safety information</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#cars">Daily rentals</a></li>
+                        <li><a href="#cars">Weekly rentals</a></li>
+                        <li><a href="#cars">Airport pickup</a></li>
+                        <li><a href="#cars">Corporate rentals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About DriveEase</a></li>
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy policy</a></li>
+                        <li><a href="#terms">Terms &amp; conditions</a></li>
+                        <li><a href="#refund">Refund policy</a></li>
+                        <li><a href="#cookies">Cookie policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <span class="footer-currency">Currency: INR</span>
+                    <p class="footer-copyright">&copy; 2026 DriveEase. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2>Book Your Car</h2>
+                <div class="selected-car" id="selectedCarInfo">
+                    <!-- Selected car info will be inserted here -->
+                </div>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required placeholder="John Doe">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" required placeholder="+1 (555) 123-4567">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="licenseNumber">Driver's License *</label>
+                        <input type="text" id="licenseNumber" required placeholder="DL123456789">
+                        <span class="error-message" id="licenseError"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickupDate">Pickup Date *</label>
+                        <input type="date" id="pickupDate" required>
+                        <span class="error-message" id="pickupError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dropoffDate">Drop-off Date *</label>
+                        <input type="date" id="dropoffDate" required>
+                        <span class="error-message" id="dropoffError"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pickupLocation">Pickup Location *</label>
+                    <select id="pickupLocation" required>
+                        <option value="">Select Location</option>
+                        <option value="downtown">Downtown Office</option>
+                        <option value="airport">Airport Terminal</option>
+                        <option value="mall">City Mall</option>
+                        <option value="station">Central Station</option>
+                    </select>
+                    <span class="error-message" id="locationError"></span>
+                </div>
+                <div class="price-summary" id="priceSummary">
+                    <div class="price-row">
+                        <span>Daily Rate (INR):</span>
+                        <span id="dailyRate">₹0</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Number of Days:</span>
+                        <span id="numDays">0</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total Price (INR):</span>
+                        <span id="totalPrice">₹0</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal-overlay" id="confirmationModal">
+        <div class="modal confirmation-modal">
+            <div class="confirmation-icon">✓</div>
+            <h2>Booking Confirmed!</h2>
+            <div id="confirmationDetails">
+                <!-- Confirmation details will be inserted here -->
+            </div>
+            <button class="btn btn-primary" id="closeConfirmation">Done</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveEase - Sign in or Register</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-brand">
+                    <span class="auth-logo-icon">🚗</span>
+                    <span class="auth-logo-text">DriveEase</span>
+                </div>
+            </div>
+            <div class="auth-content">
+                <h1 class="auth-title">Sign in or create an account</h1>
+                <p class="auth-subtitle">Use your email to continue with DriveEase</p>
+
+                <form id="authForm" class="auth-form" novalidate>
+                    <div class="auth-field">
+                        <label for="authEmail">Email address</label>
+                        <input type="email" id="authEmail" placeholder="you@example.com" required>
+                        <span class="auth-error" id="authEmailError"></span>
+                    </div>
+                    <button type="submit" class="auth-btn-primary">Continue with email</button>
+                    <p class="auth-message" id="authMessage"></p>
+                </form>
+
+                <div class="auth-divider">
+                    <span>or continue with</span>
+                </div>
+
+                <div class="auth-social-buttons">
+                    <button class="auth-social-btn auth-social-google" type="button">
+                        <span class="auth-social-label">Google</span>
+                    </button>
+                    <button class="auth-social-btn auth-social-apple" type="button">
+                        <span class="auth-social-label">Apple</span>
+                    </button>
+                    <button class="auth-social-btn auth-social-facebook" type="button">
+                        <span class="auth-social-label">Facebook</span>
+                    </button>
+                </div>
+
+                <div class="auth-legal">
+                    <a href="#">Terms &amp; Conditions</a>
+                    <span>•</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="auth-footer">
+                <p>&copy; 2026 DriveEase. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
+
